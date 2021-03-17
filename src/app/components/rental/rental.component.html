@@ -1,22 +1,23 @@
-<table class="table">
+<div *ngIf="dataLoaded==false" class="spinner-border text-primary" role="status">
+  <span class="visually-hidden"></span>
+</div>
+<table *ngIf="dataLoaded==true"class="table">
   <thead>
     <tr>
-      <th>Marka</th>
+      <th>Kullanıcı</th>
       <th>Müşteri</th>
-      <th>Kiralanma tarihi</th>
+      <th>Marka</th>
+      <th>Detay</th>
+      <th>Alış tarihi</th>
       <th>Dönüş tarihi</th>
     </tr>
   </thead>
-  <tr>
-    <td>Opel</td>
-    <td>Yusuf Arslan</td>
-    <td>03.03.2020</td>
-    <td>10.03.2020</td>
+  <tr *ngFor="let rental of rentals">
+    <td>{{rental.userFullName}}</td>
+    <td>{{rental.customerName}}</td>
+    <td>{{rental.brandName}}</td>    
+    <td>{{rental.carName}}</td>
+    <td>{{rental.rentDate}}</td>
+    <td>{{rental.returnDate}}</td>
   </tr>
-  <tr>
-    <td>Opel</td>
-    <td>Gönül Arslan</td>
-    <td>13.03.2020</td>
-    <td>13.04.2020</td>
-  </tr>
-</table>
+  
