@@ -2,6 +2,8 @@
   <span class="visually-hidden"></span>
 </div>
 <ul *ngIf="dataLoaded==true" class="list-group" >
-    <li class="list-group-item active ">Markalar</li>
-    <li *ngFor="let brand of brands"  class="list-group-item" >{{brand.name}}</li>
+    <li routerLink="/cars/brand/all" class="list-group-item bg-secondary text-white">Markalar</li>    
+    <li (click)="setCurrentBrand(brand)" *ngFor="let brand of brands"  
+    [class]="getCurrentBrandClass(brand)" 
+    routerLink="/cars/brand/{{brand.id}}">{{brand.name}}</li>
   </ul>
