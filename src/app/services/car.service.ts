@@ -25,4 +25,8 @@ export class CarService {
     return this.httpClient.get<ListResponseModel<Car>>(newApiUrl)
   }
 
+  getCarsByCarId(carId:number):Observable<ListResponseModel<Car>>{
+    let newApiUrl=this.baseApiUrl+"cars/getdetailsbycarid?carId="+carId
+    return this.httpClient.get<ListResponseModel<Car>>(newApiUrl)
+  }
 }

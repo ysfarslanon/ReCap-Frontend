@@ -26,9 +26,7 @@ export class BrandComponent implements OnInit {
 
   setCurrentBrand(brand: Brand) {
     this.currentBrand = brand;
-  }
-
-  
+  } 
 
   getCurrentBrandClass(brand: Brand) {
     if (brand === this.currentBrand) {

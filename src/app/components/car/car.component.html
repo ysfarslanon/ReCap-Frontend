@@ -5,6 +5,7 @@
 <table *ngIf="dataLoaded==true" class="table">
   <thead>
     <tr>
+      <th>Detay</th>
       <th>Marka</th>
       <th>Üretim yılı</th>
       <th>Renk</th>
@@ -13,7 +14,8 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let car of cars">
+    <tr *ngFor="let car of cars" >
+      <button class="btn" routerLink="cars/carDetails/{{car.carId}}">Detay</button>
       <td>{{car.brandName}}</td>
       <td>{{car.modelYear}}</td>
       <td>{{car.colorName}}</td>
