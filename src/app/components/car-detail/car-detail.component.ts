@@ -14,7 +14,7 @@ export class CarDetailComponent implements OnInit {
 
   cars: Car[]
   carImages: CarImage[]
-  urlPath: string = "https://localhost:44305" // car images/ silenebilir
+  urlPath: string = "https://localhost:44305" 
 
   constructor(private carService: CarService, private carDetailService: CarDetailService,
     private activatedRoute: ActivatedRoute) { }
@@ -24,11 +24,7 @@ export class CarDetailComponent implements OnInit {
       if(params["carId"]){
         this.getCarDetail(params["carId"])
         this.getCarImagesByCarId(params["carId"])
-        console.log(params)
-      }
-      else{
-
-      }
+      }      
     })
    
   }

@@ -1,13 +1,9 @@
-<h5>Baş</h5>
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+
   <div class="carousel-inner">
-
     <div *ngFor="let img of carImages let i=index"  [ngClass]="getCarouselActiveOrNot(i)">
-      <img height="250"  [src]="urlPath+img.imagePath" class="d-block w-100" alt="...">
-      <h5><br>{{urlPath}}{{img.imagePath}}{{i}}</h5>
-    </div>
-
-  
+      <img height="250"  [src]="urlPath+img.imagePath" class="d-block w-100" alt="...">     
+    </div>  
   </div>
   
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
@@ -25,6 +21,6 @@
   <li class="list-group-item">Renk: {{car.colorName}}</li>
   <li class="list-group-item">Günlük fiyat(TL): {{car.dailyPrice}}</li>
   <li class="list-group-item">Açıklama: {{car.carName}}</li>
+  <li class="list-group-item"><button  class="btn btn-primary">Kirala</button></li>
 </ul>
 
-  <h5>Son</h5>

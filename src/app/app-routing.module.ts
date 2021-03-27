@@ -7,12 +7,12 @@ import { CarComponent } from './components/car/car.component';
 const routes: Routes = [
   {path:"", pathMatch:"full", component:CarComponent},
   {path:"cars/brand",component:CarComponent},
-  {path:"cars/brand/:brandId",component:CarComponent},
+  {path:"cars/brand/:brandId/cars/carDetails/:carId",pathMatch:"full",component:CarDetailComponent},  
   {path:"cars/color",component:CarComponent},
-  {path:"cars/color/:colorId",component:CarComponent},
+  {path:"cars/color/:colorId/cars/carDetails/:carId",pathMatch:"full",component:CarDetailComponent},  
   {path:"cars/carDetails/:carId",component:CarDetailComponent},
-  {path:"cars/brand/:brandId/cars/cardetails/:carId",component:CarDetailComponent},
-  {path:"cars/color/:colorId/cars/cardetails/:carId",component:CarDetailComponent}
+  {path:"cars/brand/:brandId",component:CarComponent},
+  {path:"cars/color/:colorId",component:CarComponent}
 ];
 
 @NgModule({
