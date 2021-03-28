@@ -13,7 +13,7 @@ export class CarComponent implements OnInit {
 
   dataLoaded=false
   cars:Car[]=[]
-
+  filterCarText:string=""
   
   constructor(private carService:CarService,
     private activatedRoute:ActivatedRoute) { }

@@ -17,7 +17,6 @@
     <td>{{rental.customerName}}</td>
     <td>{{rental.brandName}}</td>    
     <td>{{rental.carName}}</td>
-    <td>{{rental.rentDate}}</td>
-    <td>{{rental.returnDate}}</td>
-  </tr>
+    <td>{{rental.rentDate | date:'dd/MM/yyyy HH:mm'}}</td>
+    <td>{{rental.returnDate | date:'dd/MM/yyyy HH:mm'}}
   
