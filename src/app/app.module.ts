@@ -17,6 +17,7 @@ import { from } from 'rxjs';
 import { FilterBrandPipe } from './pipes/filterBrand/filter-brand.pipe';
 import { FilterCarPipe } from './pipes/filterCar/filter-car.pipe';
 import { FilterColorPipe } from './pipes/filterColor/filter-color.pipe';
+import { CarFilterComponent } from './components/car-filter/car-filter.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { FilterColorPipe } from './pipes/filterColor/filter-color.pipe';
     DenemeComponent,
     FilterBrandPipe,
     FilterCarPipe,
-    FilterColorPipe
+    FilterColorPipe,
+    CarFilterComponent
   ],
   imports: [
     BrowserModule,
