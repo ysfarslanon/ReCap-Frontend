@@ -2,16 +2,16 @@
   <span class="visually-hidden"></span>
 </div>
 
-<div class="row">
+<div class="row" *ngIf="dataLoaded==true">
   <div class="col col-md-12">
       <app-car-filter></app-car-filter>
   </div>
 </div>
 
-<div class="row">
+<div class="row" *ngIf="dataLoaded==true">
   <div class="col col-md-12">
     <input type="text" [(ngModel)]="filterCarText" class="form-control" id="filterText" placeholder="Araç arama">
-    <table *ngIf="dataLoaded==true" class="table"> 
+    <table  class="table"> 
       <thead>    
         <tr>      
           <th>Detay</th>

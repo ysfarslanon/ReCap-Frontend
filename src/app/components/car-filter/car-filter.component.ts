@@ -29,7 +29,7 @@ export class CarFilterComponent implements OnInit {
   }
   getColors(){
     this.colorService.getColors().subscribe(response=>{
-      this.colors=response.data
+      this.colors=response.data      
     })
   }
   getSelectedBrand(id:number){
