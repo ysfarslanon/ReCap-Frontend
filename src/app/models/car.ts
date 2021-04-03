@@ -10,4 +10,5 @@ export interface Car{
     dailyPrice:number
     modelYear:number
     imagePath:CarImage[]
+   // status:boolean
 }
