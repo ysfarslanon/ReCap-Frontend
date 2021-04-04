@@ -24,6 +24,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { ColorAddComponent } from './components/color/color-add/color-add.component';
 import { CarAddComponent } from './components/car/car-add/car-add.component';
 import { BrandListComponent } from './components/brand-list/brand-list.component';
+import { ColorListComponent } from './components/color-list/color-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,8 @@ import { BrandListComponent } from './components/brand-list/brand-list.component
     CarFilterComponent,
     ColorAddComponent,
     CarAddComponent,
-    BrandListComponent
+    BrandListComponent,
+    ColorListComponent
   ],
   imports: [
     BrowserModule,

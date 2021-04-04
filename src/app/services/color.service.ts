@@ -22,4 +22,13 @@ export class ColorService {
     let newApiUrl = this.baseApiUrl + "add"
     return this.httpClient.post<ResponseModel>(newApiUrl, color)
   }
+
+  update(color:Color):Observable<ResponseModel>{
+    let newApiUrl=this.baseApiUrl+"update"
+    return this.httpClient.post<ResponseModel>(newApiUrl,color)
+  }
+  delete(color:Color):Observable<ResponseModel>{
+    let newApiUrl=this.baseApiUrl+"delete"
+    return this.httpClient.post<ResponseModel>(newApiUrl,color)
+  }
 }

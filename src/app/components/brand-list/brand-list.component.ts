@@ -17,7 +17,7 @@ export class BrandListComponent implements OnInit {
   brandUpdateForm: FormGroup
   brandDeleteForm: FormGroup
   selectedBrand: Brand
-  constructor(private brandService: BrandService, private formsBuilder: FormBuilder,
+  constructor(private brandService: BrandService, private formBuilder: FormBuilder,
     private toastrService: ToastrService) { }
 
   ngOnInit(): void {
@@ -33,7 +33,7 @@ export class BrandListComponent implements OnInit {
   }
 
   addCreateForm() {
-    this.brandAddForm = this.formsBuilder.group({
+    this.brandAddForm = this.formBuilder.group({
       name: ["", Validators.required]
     })
   }
@@ -44,7 +44,7 @@ export class BrandListComponent implements OnInit {
   }
 
   updateCreateForm() {
-    this.brandUpdateForm = this.formsBuilder.group({
+    this.brandUpdateForm = this.formBuilder.group({
       id: [this.selectedBrand.id, Validators.required],
       name: ["", Validators.required]
     })
@@ -55,7 +55,7 @@ export class BrandListComponent implements OnInit {
     this.deleteCreateForm();
   }
   deleteCreateForm() {
-    this.brandDeleteForm = this.formsBuilder.group({
+    this.brandDeleteForm = this.formBuilder.group({
       id: [this.selectedBrand.id, [Validators.required]],
       name: [this.selectedBrand.name, [Validators.required]],
     });
