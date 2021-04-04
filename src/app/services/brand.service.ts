@@ -22,4 +22,12 @@ export class BrandService {
     let newApiUrl = this.baseApiUrl + "add"
     return this.httpClient.post<ResponseModel>(newApiUrl, brand)
   }
+  update(brand:Brand):Observable<ResponseModel>{
+    let newApiUrl=this.baseApiUrl+"update"
+    return this.httpClient.post<ResponseModel>(newApiUrl,brand)
+  }
+  delete(brand:Brand):Observable<ResponseModel>{
+    let newApiUrl=this.baseApiUrl+"delete"
+    return this.httpClient.post<ResponseModel>(newApiUrl,brand)
+  }
 }

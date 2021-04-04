@@ -26,13 +26,9 @@ export class BrandComponent implements OnInit {
       this.dataLoaded = true
     });
   }
-
   setCurrentBrand(brand: Brand) {
     this.currentBrand = brand
   }
-  
- 
-
   getCurrentBrandClass(brand: Brand) {
     if (brand === this.currentBrand) {
       return "list-group-item active"
@@ -40,6 +36,6 @@ export class BrandComponent implements OnInit {
     return "list-group-item"
   }
  
-
+ 
 }
 //

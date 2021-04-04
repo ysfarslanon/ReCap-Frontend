@@ -8,7 +8,7 @@
       <input type="text"  [(ngModel)]="filterBrandText" class="form-control" id="brandText" placeholder="Marka arama">
       <li (click)="setCurrentBrand(brand)" *ngFor="let brand of brands | filterBrand:filterBrandText"  
           [class]="getCurrentBrandClass(brand)" 
-          routerLink="cars/brand/{{brand.id}}">{{brand.name}}
-      </li>      
+          routerLink="cars/brand/{{brand.id}}">{{brand.name}}   
+        </li>      
   </ul>
   </div>  
