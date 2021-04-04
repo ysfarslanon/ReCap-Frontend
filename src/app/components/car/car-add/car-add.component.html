@@ -1,0 +1,84 @@
+<div class="content">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header"><h5>Araba Ekleme</h5></div>
+
+      <div class="card-body">
+        <form [formGroup]="carAddForm" action="">
+          <div class="mb-3">
+            
+            <div class="form-group">
+
+              <div class="row">
+                <div class="col-md-4">
+                    <label for="brandName">Marka</label>
+                  <select class="form-group"  id="brandName" class="form-select" formControlName="brandId"> 
+                    <option *ngFor="let brand of brands" [ngValue]=brand.id>
+                      {{ brand.name }}
+                    </option>
+                  </select>             
+                
+                </div>
+                <div class="col-md-4">
+                    <label for="colorName">Renk</label>
+                  
+                     <select class="form-group"  id="colorName" class="form-select" formControlName="colorId">
+                        <option *ngFor="let color of colors" [ngValue]=color.id>
+                          {{ color.name }}
+                        </option>
+                      </select>                  
+                  
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-4">
+                    <label for="modelYear">Model yılı</label>
+                    <input
+                        type="number"
+                        id="modelYear"
+                        formControlName="modelYear"
+                        class="form-control"
+                        placeholder="Model yılı giriniz (1900)"
+                        minlength="4"
+                        maxlength="4"
+                    />
+                </div>
+                <div class="col-md-4">
+                    <label for="dailyPrice">Günlük Ücret</label>
+                    <input
+                    type="number"
+                    id="dailyPrice"
+                    formControlName="dailyPrice"
+                    class="form-control"
+                    placeholder="Günlük ücret giriniz"
+                   minlength="2"
+                   maxlength="5"
+                   />
+                </div>               
+              </div>
+
+              <div class="row">
+                <div class="col-md-8">
+                  <label for="description">Açıklama</label>
+                    <input
+                    type="text"
+                    id="description"
+                    formControlName="description"
+                    class="form-control"
+                    placeholder="Açıklama"
+                    />
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="card-footer">
+        <button class="btn btn-fill btn-primary" (click)="add()">Ekle</button>
+      </div>
+    </div>
+  </div>
+</div>
